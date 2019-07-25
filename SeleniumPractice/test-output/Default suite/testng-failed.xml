@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <test thread-count="5" name="Default test(failed)">
+    <classes>
+      <class name="test.DownloadProgressTest">
+        <methods>
+          <include name="close"/>
+          <include name="switchToWindowAndGetTitle"/>
+          <include name="launchBrowser"/>
+        </methods>
+      </class> <!-- test.DownloadProgressTest -->
+      <class name="test.BootstrapDatePickerTest">
+        <methods>
+          <include name="selectDate"/>
+          <include name="closeBrowser"/>
+          <include name="init"/>
+        </methods>
+      </class> <!-- test.BootstrapDatePickerTest -->
+      <class name="test.DragAndDropTest">
+        <methods>
+          <include name="launchBrowser"/>
+          <include name="test2"/>
+          <include name="close"/>
+        </methods>
+      </class> <!-- test.DragAndDropTest -->
+      <class name="test.WindowPopUpTest">
+        <methods>
+          <include name="launchBrowser"/>
+          <include name="close"/>
+          <include name="switchToWindowAndGetTitle"/>
+        </methods>
+      </class> <!-- test.WindowPopUpTest -->
+      <class name="test.AlertBoxTest">
+        <methods>
+          <include name="launchBrowser"/>
+          <include name="testPositionData"/>
+          <include name="close"/>
+        </methods>
+      </class> <!-- test.AlertBoxTest -->
+      <class name="test.DualListBoxTest">
+        <methods>
+          <include name="launchBrowser"/>
+          <include name="testPositionData"/>
+          <include name="close"/>
+        </methods>
+      </class> <!-- test.DualListBoxTest -->
+    </classes>
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->
