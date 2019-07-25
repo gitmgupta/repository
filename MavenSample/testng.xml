@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite" parallel="methods" thread-count="5">
+
+	<test name="Test">
+		<!-- For annotation parameter, name should be same as parameter pass for 
+			the respective methods, also in testng value is required -->
+		<parameter name="username" value="Mgupta" />
+		<parameter name="password" value="Password" />
+		<groups>
+		
+			<define name="functest">
+				
+			</define>
+			<run>
+				<include name="all" />
+			</run>
+		</groups>
+		<classes>
+			<class name="com.testng.Class01">
+				<methods>
+					<include name="paramertersExample" />
+				</methods>
+			</class>
+	<class name="com.testng.Class02" />
+		</classes>
+	</test>
+
+	<!-- Parallel Suites Test (parallel = 'tests') -->
+	<test name="FirefoxTest">
+		<parameter name="browser" value="firefox" />
+		<classes>
+			<class name="com.testng.ParallelSuitesTest" />
+		</classes>
+	</test>
+
+
+	<test name="ChromeTest">
+		<parameter name="browser" value="chrome" />
+		<classes>
+			<class name="com.testng.ParallelSuitesTest" />
+		</classes>
+	</test>
+
+	<!-- Parallel Classes Test (parallel = 'classes') -->
+	<test name="Test-class test">
+		<classes>
+			<class name="com.testng.ParallelClassesTestOne" />
+			<class name="com.testng.ParallelClassesTestTwo" />
+		</classes>
+	</test>
+
+	<!-- Parallel Methods Test (parallel = 'methods') -->
+	<test name="Test-method test" group-by-instances="true">
+		<classes>
+			<class name="com.testng.ParallelMethodTest" />
+		</classes>
+	</test>
+</suite>

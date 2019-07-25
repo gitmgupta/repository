@@ -1,0 +1,131 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>Example</groupId>
+	<artifactId>MavenSample</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<junit.version>3.8.1</junit.version>
+		<selenium.version>3.141.59</selenium.version>
+		<testng.version>6.14.3</testng.version>
+		<jre.level>1.8</jre.level>
+		<jdk.level>1.8</jdk.level>
+		<cucumber-java.version>1.2.5</cucumber-java.version>
+		<selenium-server.version>3.141.59</selenium-server.version>
+		<cucumber-jvm.verison>1.2.5</cucumber-jvm.verison>
+		<cucumber-junit.verison>1.2.5</cucumber-junit.verison>
+		<cucumber-jvm-deps.verison>1.0.5</cucumber-jvm-deps.verison>
+		<gherkin.verison>2.12.2</gherkin.verison>
+		<cucumber-testng.verison>1.2.5</cucumber-testng.verison>
+		<cucumber-core.verison>1.2.5</cucumber-core.verison>
+	</properties>
+
+	<build>
+		<plugins>
+			<!-- Compiler plug-in -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>${jdk.level}</source>
+					<target>${jdk.level}</target>
+				</configuration>
+			</plugin>
+			<!-- Below plug-in is used to execute tests -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>2.19.1</version>
+				<configuration>
+					<suiteXmlFiles>
+						<!-- TestNG suite XML files -->
+						<suiteXmlFile>testng.xml</suiteXmlFile>
+					</suiteXmlFiles>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+	<dependencies>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>${junit.version}</version>
+			<scope>test</scope>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.testng/testng -->
+		<dependency>
+			<groupId>org.testng</groupId>
+			<artifactId>testng</artifactId>
+			<version>${testng.version}</version>
+			<scope>test</scope>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-server -->
+		<dependency>
+			<groupId>org.seleniumhq.selenium</groupId>
+			<artifactId>selenium-server</artifactId>
+			<version>${selenium-server.version}</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
+		<dependency>
+			<groupId>org.seleniumhq.selenium</groupId>
+			<artifactId>selenium-java</artifactId>
+			<version>${selenium.version}</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/info.cukes/cucumber-java -->
+		<dependency>
+			<groupId>info.cukes</groupId>
+			<artifactId>cucumber-java</artifactId>
+			<version>${cucumber-java.version}</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/info.cukes/cucumber-jvm -->
+		<dependency>
+			<groupId>info.cukes</groupId>
+			<artifactId>cucumber-jvm</artifactId>
+			<version>${cucumber-jvm.verison}</version>
+			<type>pom</type>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/info.cukes/cucumber-junit -->
+		<dependency>
+			<groupId>info.cukes</groupId>
+			<artifactId>cucumber-junit</artifactId>
+			<version>${cucumber-junit.verison}</version>
+			<scope>test</scope>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/info.cukes/cucumber-jvm-deps -->
+		<dependency>
+			<groupId>info.cukes</groupId>
+			<artifactId>cucumber-jvm-deps</artifactId>
+			<version>${cucumber-jvm-deps.verison}</version>
+			<scope>provided</scope>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/info.cukes/gherkin -->
+		<dependency>
+			<groupId>info.cukes</groupId>
+			<artifactId>gherkin</artifactId>
+			<version>${gherkin.verison}</version>
+			<scope>provided</scope>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/info.cukes/cucumber-testng -->
+		<dependency>
+			<groupId>info.cukes</groupId>
+			<artifactId>cucumber-testng</artifactId>
+			<version>${cucumber-testng.verison}</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/info.cukes/cucumber-core -->
+		<dependency>
+			<groupId>info.cukes</groupId>
+			<artifactId>cucumber-core</artifactId>
+			<version>${cucumber-core.verison}</version>
+		</dependency>
+		<dependency>
+			<groupId>net.sourceforge.jexcelapi</groupId>
+			<artifactId>jxl</artifactId>
+			<version>2.6.12</version>
+		</dependency>
+	</dependencies>
+</project>

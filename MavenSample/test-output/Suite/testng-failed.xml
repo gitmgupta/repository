@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]" parallel="methods">
+  <test thread-count="5" name="FirefoxTest(failed)" parallel="methods">
+    <parameter name="browser" value="firefox"/>
+    <classes>
+      <class name="com.testng.ParallelSuitesTest">
+        <methods>
+          <include name="beforeTest"/>
+          <include name="login"/>
+        </methods>
+      </class> <!-- com.testng.ParallelSuitesTest -->
+    </classes>
+  </test> <!-- FirefoxTest(failed) -->
+  <test thread-count="5" name="ChromeTest(failed)" parallel="methods">
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="com.testng.ParallelSuitesTest">
+        <methods>
+          <include name="beforeTest"/>
+          <include name="login"/>
+        </methods>
+      </class> <!-- com.testng.ParallelSuitesTest -->
+    </classes>
+  </test> <!-- ChromeTest(failed) -->
+  <test thread-count="5" name="Test-class test(failed)" parallel="methods">
+    <classes>
+      <class name="com.testng.ParallelClassesTestOne">
+        <methods>
+          <include name="beforeClass"/>
+          <include name="testMethodTwo"/>
+          <include name="afterClass"/>
+          <include name="testMethodOne"/>
+        </methods>
+      </class> <!-- com.testng.ParallelClassesTestOne -->
+      <class name="com.testng.ParallelClassesTestTwo">
+        <methods>
+          <include name="afterClass"/>
+          <include name="testMethodOne"/>
+          <include name="beforeClass"/>
+          <include name="testMethodTwo"/>
+        </methods>
+      </class> <!-- com.testng.ParallelClassesTestTwo -->
+    </classes>
+  </test> <!-- Test-class test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
