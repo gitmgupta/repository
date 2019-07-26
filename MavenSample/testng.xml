@@ -9,7 +9,7 @@
 		<parameter name="password" value="Password" />
 		<groups>
 		
-			<define name="functest">
+			<define name="">
 				
 			</define>
 			<run>
@@ -38,7 +38,7 @@
 	<test name="ChromeTest">
 		<parameter name="browser" value="chrome" />
 		<classes>
-			<class name="com.testng.ParallelSuitesTest" />
+			<inclueclass name="com.testng.ParallelSuitesTest" />
 		</classes>
 	</test>
 

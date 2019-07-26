@@ -21,6 +21,7 @@ public class AlertBoxTest {
 	}
 
 	@Test(alwaysRun=true)
+	
 	public void testPositionData() throws InterruptedException {
 		System.out.println("Test in Alert Box");
 		alertBox.click_Alert_Box();
@@ -35,6 +36,11 @@ public class AlertBoxTest {
 		alertBox.getAlertInAction("Accept", "");
 
 	}
+	
+	@Test()
+	
+	
+	@test
 
 	@AfterMethod
 	public void close() {
