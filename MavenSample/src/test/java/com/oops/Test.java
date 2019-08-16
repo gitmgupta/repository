@@ -4,7 +4,8 @@ import java.io.IOException;
 
 public class Test { 
 	
-	
+	String s = "";
+	StringBuffer sbf = new StringBuffer();
 	
     public static void main(String args[ ]) throws IOException  { 
     	Derived obj1 = new Derived(); 

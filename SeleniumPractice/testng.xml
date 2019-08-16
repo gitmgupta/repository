@@ -1,16 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Suite">
-
+	<listeners>
+		<listener class-name="listenersPackage.ListenersTest" />
+		<listener class-name="listenersPackage.MyTransformer" />
+	</listeners>
 	<test name="Test">
-	<group name= "group test">
-	
-	</group>
 		<classes>
-			<class name="test.AlertBoxTest" />
+			<class name="test.AlertBoxTest">
+				<methods>
+					<include name="testexample" />
+					<include name="testExample2" />
+					<include name="testPositionData" />
+				</methods>
+			</class>
 			<class name="test.BootstrapDatePickerTest" />
 			<class name="test.DownloadProgressTest" />
-
+			<class name="test.DragAndDropTest" />
 		</classes>
 	</test>
 </suite>

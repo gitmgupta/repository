@@ -1,3 +1,4 @@
-/common/
-/pages/
+/log4j.properties
 /test/
+/Manual.log
+/Selenium.logs

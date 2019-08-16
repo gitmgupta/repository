@@ -1,0 +1,5 @@
+2019-08-16 20:29:42,033 DEBUG [main] AlertBoxTest:35- Log4j appender configuration is successful !!
+2019-08-16 20:29:42,035  WARN [main] AlertBoxTest:36- Test Warn
+2019-08-16 20:29:42,035 ERROR [main] AlertBoxTest:37- Test Error
+2019-08-16 20:29:42,035 FATAL [main] AlertBoxTest:38- Test fatal
+2019-08-16 20:29:42,035  INFO [main] AlertBoxTest:39- Test info

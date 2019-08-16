@@ -31,13 +31,13 @@ public class TestDriver {
 			switch (browser.toUpperCase()) {
 			case "FIREFOX":
 				System.out.println("Launching firefox browser");
-				String firefoxDriver = "ExecutableFile/geckodriver.exe";
+				String firefoxDriver = "lib/geckodriver.exe";
 				System.setProperty("webdriver.gecko.driver", firefoxDriver);
 				driver = new FirefoxDriver();
 				break;
 			case "CHROME":
 				System.out.println("launching chrome browser");
-				String chromeDriver = "ExecutableFile/chromedriver.exe";
+				String chromeDriver = "lib/chromedriver.exe";
 				System.setProperty("webdriver.chrome.driver", chromeDriver);
 				driver = new ChromeDriver();
 				break;

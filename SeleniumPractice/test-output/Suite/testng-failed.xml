@@ -1,15 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <listeners>
+    <listener class-name="listenersPackage.ListenersTest"/>
+    <listener class-name="listenersPackage.MyTransformer"/>
+  </listeners>
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="test.BootstrapDatePickerTest">
+      <class name="test.DownloadProgressTest">
         <methods>
-          <include name="selectDate"/>
-          <include name="closeBrowser"/>
-          <include name="init"/>
+          <include name="close"/>
+          <include name="switchToWindowAndGetTitle"/>
+          <include name="launchBrowser"/>
         </methods>
-      </class> <!-- test.BootstrapDatePickerTest -->
+      </class> <!-- test.DownloadProgressTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->
